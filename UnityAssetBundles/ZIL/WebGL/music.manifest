@@ -1,20 +1,20 @@
 ManifestFileVersion: 0
-CRC: 3146387529
+CRC: 2309782879
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 60418bf958da4bf35f5c5f521eb69a63
+    Hash: 2859bfadf1bb09ba3773802c0498c16b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9a2ca7bdbd1871f7131daf57de908e0c
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 60418bf958da4bf35f5c5f521eb69a63
+    Hash: 2859bfadf1bb09ba3773802c0498c16b
 HashAppended: 0
 ClassTypes:
 - Class: 83
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/While-the-City-Sleeps_Looping.ogg
+- Assets/Client/Sounds/Music/While-the-City-Sleeps_Looping.ogg
 Dependencies: []
