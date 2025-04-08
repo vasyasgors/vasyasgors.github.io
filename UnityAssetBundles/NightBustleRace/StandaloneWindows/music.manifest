@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1198518912
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0f88f503b2a792c20f48d2004b737e01
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 0f88f503b2a792c20f48d2004b737e01
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Client/Sounds/Music/While-the-City-Sleeps_Looping.ogg
+- Assets/Client/Sounds/Music/Holligans by Evgeny Vardyizha.ogg
+- Assets/Client/Sounds/Music/Crypto Race by HVRDVR.ogg
+- Assets/Client/Sounds/Music/Hard-Way-by-AlexGrohl.ogg
+Dependencies: []
