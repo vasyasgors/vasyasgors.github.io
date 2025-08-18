@@ -1,47 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Главная | Мой сайт</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    /* Базовые стили */
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #eee;
+      font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 25px 20px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      user-select: none;
+    }
+    nav {
+      background-color: #1e1e1e;
+      border-bottom: 1px solid #333;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+    }
+    nav ul li a {
+      display: inline-block;
+      padding: 15px 10px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-bottom: 3px solid transparent;
+      transition: color 0.3s ease, border-color 0.3s ease;
+      user-select: none;
+    }
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #57a0ff;
+      border-color: #57a0ff;
+      outline: none;
+    }
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 15px;
+      text-align: center;
+    }
+    main h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    main p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #bbb;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .section-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .section-links a {
+      background-color: #1e1e1e;
+      color: #eee;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 25px 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    .section-links a:hover,
+    .section-links a:focus {
+      background-color: #2a2a2a;
+      box-shadow: 0 6px 20px #57a0ffaa;
+      color: #57a0ff;
+      outline: none;
+    }
+    footer {
+      border-top: 1px solid #333;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+      user-select: none;
+    }
+
+    /* Адаптив для мобильных */
+    @media (max-width: 480px) {
+      nav ul {
+        gap: 20px;
+      }
+      .section-links {
+        grid-template-columns: 1fr;
+      }
+      header {
+        font-size: 2rem;
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
 <body>
+  <header>Мой сайт</header>
 
-<h1>Unity</h1>
+  <!-- Навигация добавится сюда из nav.js -->
+  <div id="nav-container"></div>
 
-<p><a href="BehaviourBuilder_0.6.5.unitypackage" download>BehaviourBuilder_0.6.5.unitypackage</a>
-<p><a href="SimpleScripts_v.0.5.unitypackage" download>SimpleScripts_v.0.5.unitypackage</a>
-
-<!--
-<p><a href="2D.unitypackage" download> 2D</a>
-<p><a href="Cameras.unitypackage" download>Cameras </a>
-<p><a href="Characters.unitypackage" download>Characters </a>
-<p><a href="CrossPlatformInput.unitypackage" download>CrossPlatformInput </a>
-<p><a href="Effects.unitypackage" download>Effects </a>
-<p><a href="Environment.unitypackage" download>Environment </a>
-<p><a href="ParticleSystems.unitypackage" download>ParticleSystems</a>
-<p><a href="Prototyping.unitypackage" download>Prototyping </a>
-<p><a href="Utility.unitypackage" download>Utility</a>
-<p><a href="Vehicles.unitypackage" download>Vehicles</a>
-<p><a href="Грейся чтобы выжить.unitypackage" download>Грейся чтобы выжить</a>
--->
-<hr>
-<h1>Dev C++</h1>
-<p><a href="Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup" download>Dev C++</a>
-<p><a href="Простая графика C++.zip" download> Простая графика C++</a>
-<p> Команды для компоновщика: -lbgi -lgdi32 -luser32
-<p> <img src="dcbgiw10.gif">
-
-
+  <main>
+   <h1>Добро пожаловать!</h1>
   
- <p><a href="Задачи - Арифметический цикл.pdf" download>Задачи - Арифметический цикл</a>
-  <p><a href="Код для форматирования.cs" download>Код для форматирования.cs</a>
-<p><a href="CubeModel.cs" download>Пример реального кода</a>
-<p><a href="music" download>sdfsdf</a>
-    
+    <div class="section-links">
+      <a href="portfolio-3d.html" aria-label="Переход в раздел Портфолио 3D">🎨 Портфолио 3D</a>
+      <a href="materials-unity.html" aria-label="Переход в раздел Материалы по Unity">🕹 Материалы по Unity</a>
+      <a href="materials-blender.html" aria-label="Переход в раздел Материалы по Blender">🖌 Материалы по Blender</a>
+      <a href="materials-programming.html" aria-label="Переход в раздел Материалы по программированию">💻 Материалы по программированию</a>
+    </div>
+  </main>
 
-  
-<h1>Blender</h1>
-<p> https://www.sharetextures.com/textures
-<p> https://www.cgbookcase.com/
-<p> https://3dd-modeli.com/teksturi-pbr-materiali
-<p> https://ambientcg.com/
-<p> https://3dtextures.me/
-<p> https://polyhaven.com/textures
+  <footer>© 2025 Ваше Имя</footer>
+
+  <script src="nav.js"></script>
 </body>
 </html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфолио 3D | Мой сайт</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Дополнительные стили для галереи */
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.9);
+    }
+    .img-container {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .caption {
+      padding: 10px 15px;
+      font-size: 1rem;
+      text-align: center;
+      color: #ccc;
+      word-break: break-word;
+      flex-shrink: 0;
+    }
+    /* Модальное окно и кнопки навигации можно стилизовать в style.css или здесь */
+  </style>
+</head>
+<body>
+  <header>Портфолио 3D</header>
+
+  <div id="nav-container"></div>
+
+  <main id="gallery" style="max-width: 1200px; margin: 20px auto 60px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+    <!-- Галерея из скрипта -->
+  </main>
+
+  <footer>© 2025 Ваше Имя</footer>
+
+  <script src="nav.js"></script>
+  <script>
+    const files = [
+      "archer.png",
+      "box.jpg",
+      "cap_of_coffe.png",
+      "lighthouse.png",
+      "mustang.png",
+      "patifon.jpg",
+      "room.png",
+      "sport_car.jpg",
+      "well.png"
+    ];
+    const captions = [
+      "Лучница",
+      "Коробка",
+      "Кружка кофе",
+      "Маяк",
+      "Мустанг",
+      "Патефон",
+      "Комната",
+      "Спортивная машина",
+      "Колодец"
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    // Создаем элемент модального окна
+    const modal = document.createElement("div");
+    modal.id = "modal";
+    modal.style.cssText = `
+      display:none;
+      position:fixed;
+      z-index:1000;
+      left:0; top:0;
+      width:100vw; height:100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content:center;
+      align-items:center;
+      cursor: zoom-out;
+    `;
+    modal.innerHTML = `<img style="max-width:90vw; max-height:90vh; border-radius:8px; box-shadow:0 0 20px rgba(255,255,255,0.5); pointer-events:none;" alt="Просмотр изображения" />`;
+    document.body.appendChild(modal);
+    const modalImg = modal.querySelector("img");
+
+    // Кнопки навигации
+    const prevBtn = document.createElement("button");
+    prevBtn.id = "prevBtn";
+    prevBtn.className = "nav-button";
+    prevBtn.textContent = "❮";
+    prevBtn.setAttribute("aria-label", "Предыдущее изображение");
+    prevBtn.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: white;
+      font-size: 2.5rem;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      user-select: none;
+      z-index: 1100;
+      transition: background 0.3s ease;
+    `;
+    document.body.appendChild(prevBtn);
+
+    const nextBtn = document.createElement("button");
+    nextBtn.id = "nextBtn";
+    nextBtn.className = "nav-button";
+    nextBtn.textContent = "❯";
+    nextBtn.setAttribute("aria-label", "Следующее изображение");
+    nextBtn.style.cssText = `
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: white;
+      font-size: 2.5rem;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      user-select: none;
+      z-index: 1100;
+      transition: background 0.3s ease;
+    `;
+    document.body.appendChild(nextBtn);
+
+    files.forEach((filename, index) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const imgContainer = document.createElement("div");
+      imgContainer.className = "img-container";
+
+      const img = document.createElement("img");
+      img.src = `img/portfolio-3d/prev_${filename}`;
+      img.alt = captions[index];
+      imgContainer.appendChild(img);
+
+      card.appendChild(imgContainer);
+
+      const caption = document.createElement("div");
+      caption.className = "caption";
+      caption.textContent = captions[index];
+      card.appendChild(caption);
+
+      img.addEventListener("click", e => {
+        e.stopPropagation();
+        openModal(index);
+      });
+
+      gallery.appendChild(card);
+    });
+
+    let currentIndex = -1;
+
+    function openModal(index) {
+      currentIndex = index;
+      modal.style.display = "flex";
+      modalImg.src = `img/portfolio-3d/${files[currentIndex]}`;
+      modalImg.alt = captions[currentIndex];
+      showNavButtons(true);
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+      modalImg.src = "";
+      modalImg.alt = "";
+      showNavButtons(false);
+      currentIndex = -1;
+    }
+
+    function showNavButtons(show) {
+      prevBtn.style.display = show ? "block" : "none";
+      nextBtn.style.display = show ? "block" : "none";
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % files.length;
+      openModal(currentIndex);
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + files.length) % files.length;
+      openModal(currentIndex);
+    }
+
+    modal.addEventListener("click", closeModal);
+    prevBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      showPrev();
+    });
+    nextBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      showNext();
+    });
+    document.addEventListener("keydown", e => {
+      if (modal.style.display === "flex") {
+        if (e.key === "Escape") {
+          closeModal();
+        } else if (e.key === "ArrowRight") {
+          showNext();
+        } else if (e.key === "ArrowLeft") {
+          showPrev();
+        }
+      }
+    });
+
+    showNavButtons(false);
+  </script>
+</body>
+</html>
