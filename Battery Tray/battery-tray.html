@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Учебный компилятор C#</title>
+  <title>Battery Tray</title>
+  <!-- Добавлена ссылка на фавикон -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,6 +27,10 @@
       margin-bottom: 12px;
       font-weight: 700;
       color: #0052cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
     }
     p {
       font-size: 18px;
@@ -53,6 +59,11 @@
       margin-bottom: 24px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
+    .icon-header {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+    }
     footer {
       margin-top: 48px;
       font-size: 14px;
@@ -62,11 +73,16 @@
 </head>
 <body>
   <div class="container">
-    <h1>Учебный компилятор C#</h1>
-    <img src="screenshot.png" alt="Скриншот компилятора" class="screenshot" />
-    <p>Простой учебный компилятор для изучения основ языка C# и принципов компиляции. Легкий, надежный и понятный для начинающих разработчиков.</p>
-    <a href="compiler.zip" download class="btn-download">Скачать</a>
-    <footer>© 2025 Автор. Все права защищены.</footer>
+    <h1>
+      <img src="img/battery-icon.png" alt="Иконка Battery Tray" class="icon-header" />
+      Battery Tray
+    </h1>
+    <img src="img/battery-tray-screenshot.jpg" alt="Скриншот" class="screenshot" />
+    <p>Battery Tray - Это программа, отображающая процентный уровень заряда батареи на панели задач.
+	Такое решение избавляет от необходимости каждый раз нажимать на иконку батареи для получения информации о текущем заряде,
+	что повышает удобство и экономит время в повседневном использовании.</p>
+    <a href="files/battery_tray_1.0.1.msi" download class="btn-download">Скачать</a>
+    <footer>© 2025 Горелкин Василий. Все права защищены.</footer>
   </div>
 </body>
 </html>
