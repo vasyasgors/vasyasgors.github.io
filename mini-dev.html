@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Dev</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f8f3f8 0%, #fdfbfb 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #5a4e75;
+      /* убрано overflow: hidden */
+    }
+    .main-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 64px;
+      max-width: 100vw;
+      max-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto; /* добавлена вертикальная прокрутка */
+    }
+    .info-block {
+      max-width: 540px;
+      text-align: left;
+    }
+    .header-main {
+      font-weight: 400;
+      font-size: 2.75rem;
+      color: #824ee1;
+      margin-bottom: 18px;
+      line-height: 1.1;
+    }
+    .header-secondary {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 32px; /* увеличенный отступ перед кнопкой */
+      color: #362671;
+    }
+    .btn-main {
+      background-color: #4a3fa6;
+      color: white;
+      padding: 14px 36px;
+      font-weight: 700;
+      font-size: 17px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(65,52,128,0.18);
+      transition: background-color 0.3s ease;
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+    .btn-main:hover {
+      background-color: #3c3283;
+    }
+    .caption {
+      font-size: 1rem;
+      color: #524b63;
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+    .img-block {
+      max-width: 800px;
+      min-width: 260px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .screenshot {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 0px;
+      box-shadow: 0 8px 32px rgba(40,32,64,0.2);
+      background: white;
+    }
+    @media (max-width: 1000px) {
+      .main-flex {
+        flex-direction: column;
+        padding: 18px;
+        gap: 24px;
+      }
+      .img-block {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 24px;
+      }
+      .info-block {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-flex">
+    <div class="img-block">
+      <img src="mini-dev/mini-dev-screenshot.jpg" alt="screenshot" class="screenshot" />
+    </div>
+    <div class="info-block">
+      <div class="header-main">Mini Dev С#</div>
+      <div class="header-secondary">
+        Mini Dev C# - это простой текстовый редактор с возможностью запустить код на C#.<br>
+        Отлично походит как первая IDE для обучения.
+      </div>    
+      <a href="mini-dev/mini_dev_1.0.0.msi" class="btn-main" download>Скачать</a>
+    </div>
+  </div>
+</body>
+</html>
