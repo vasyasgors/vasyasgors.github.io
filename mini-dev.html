@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="icon" href="mini-dev/icone_0.1_64.ico" type="image/x-icon" />
+  <link rel="icon" href="mini-dev/icone_0.1_64.ico" type="image/x-icon" />
   <title>Mini Dev</title>
   <style>
     html, body {
@@ -16,7 +16,6 @@
       background: linear-gradient(135deg, #f8f3f8 0%, #fdfbfb 100%);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #5a4e75;
-      /* убрано overflow: hidden */
     }
     .main-flex {
       display: flex;
@@ -27,7 +26,7 @@
       max-height: 100vh;
       padding: 20px;
       box-sizing: border-box;
-      overflow-y: auto; /* добавлена вертикальная прокрутка */
+      overflow-y: auto;
     }
     .info-block {
       max-width: 540px;
@@ -43,7 +42,7 @@
     .header-secondary {
       font-weight: 700;
       font-size: 1.25rem;
-      margin-bottom: 32px; /* увеличенный отступ перед кнопкой */
+      margin-bottom: 32px;
       color: #362671;
     }
     .btn-main {
@@ -68,6 +67,26 @@
       color: #524b63;
       margin-bottom: 0;
       font-weight: 600;
+    }
+    .update-block {
+      max-width: 540px;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid #d8d0e7;
+      color: #4a3fa6;
+    }
+    .update-header {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+    .update-list {
+      list-style: disc inside;
+      font-size: 1rem;
+      color: #362671;
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.4;
     }
     .img-block {
       max-width: 800px;
@@ -112,7 +131,17 @@
         Mini Dev C# - это простой текстовый редактор с возможностью запустить код на C#.<br>
         Отлично походит как первая IDE для обучения.
       </div>    
-      <a href="mini-dev/mini_dev_0.1.0.msi" class="btn-main" download>Скачать</a>
+      <a href="mini-dev/mini_dev_0.1.2.msi" class="btn-main" download>Скачать</a>
+
+      <div class="update-block">
+        <div class="update-header">Что нового</div>
+        <ul class="update-list">
+			<li>При создании или открытии нового проекта появляется окошко с предложением сохранить файл </li>
+			<li>Программа умеет открывать файл по двойному клику, если настроены ассоциации файлов </li>
+			<li>При наведении курсора на имя файла показывается полный путь к нему </li>
+			<li>Добавлена поддержка перетаскивания файлов в рабочую область для их открытия  </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
