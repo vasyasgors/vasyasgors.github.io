@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Battery Tray</title>
+  <!-- Добавлена ссылка на фавикон -->
+  <link rel="icon" href="unity-easy-constructor/easy-constructor-icone.png" type="image/x-icon" />
+  <style>
+   body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* темный фон */
+  color: #eee; /* светлый текст */
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 24px;
+  background: #1e1e1e; /* темный фон контейнера */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+  border-radius: 12px;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: rgb(51, 56, 212); /* цвет заголовка */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: #ccc; /* светло-серый текст для параграфа */
+}
+.btn-download {
+  background-color: rgb(51, 56, 212); /* цвет кнопки */
+  color: white;
+  padding: 14px 32px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20pt;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(51, 56, 212, 0.6);
+}
+.btn-download:hover {
+  background-color: rgb(31, 34, 128); /* темнее цвет кнопки при ховере */
+  box-shadow: 0 6px 14px rgba(31, 34, 128, 0.8);
+}
+img.screenshot {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+footer {
+  margin-top: 48px;
+  font-size: 14px;
+  color: #777;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>
+      <img src="unity-easy-constructor/easy-constructor-icone.png" alt="Иконка" class="icon-header" height=45px/>
+      Unity Easy Constructor 
+    </h1>
+    <!-- <img src="battery-tray/battery-tray-screenshot.jpg" alt="Скриншот" class="screenshot" /> -->
+    <p> Unity Easy Constructor  - Это удобный и интуитивно понятный конструктор для быстрой разработки проектов и прототипов.</p>
+    <a href="unity-easy-constructor/EasyConstructorLite_1.1.unitypackage" download class="btn-download">Скачать</a>
+    <footer>© 2025 Горелкин Василий. Все права защищены.</footer>
+  </div>
+</body>
+</html>
