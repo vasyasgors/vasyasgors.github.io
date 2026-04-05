@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="mini-dev/icone_0.1_64.ico" type="image/x-icon" />
+  <title>Mini Dev</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f8f3f8 0%, #fdfbfb 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #5a4e75;
+    }
+    .main-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: fit-content;
+      max-width: 100%;
+      max-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      margin: 0 auto;
+    }
+    .back-link {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #4a3fa6;
+      color: white;
+      padding: 12px 28px;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(65,52,128,0.18);
+      transition: background-color 0.3s ease;
+      align-self: center;
+    }
+    .back-link:hover {
+      background-color: #3c3283;
+    }
+    .info-block {
+      width: fit-content;
+      max-width: 900px;
+      text-align: left;
+    }
+    .update-block {
+      width: fit-content;
+      max-width: 900px;
+      padding-top: 20px;
+      /*border-top: 1px solid #d8d0e7;*/
+      color: #4a3fa6;
+    }
+    .update-header {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+    .update-list {
+      list-style: disc inside;
+      font-size: 1rem;
+      color: #362671;
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+    @media (max-width: 1000px) {
+      .main-flex {
+        padding: 18px;
+        gap: 16px;
+        width: 100%;
+        align-items: center;
+      }
+      .info-block,
+      .update-block {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-flex">
+  
+
+    <div class="update-block">
+	
+      <div class="update-header">Справка по графике:</div>
+		  <ul class="update-list">
+			<li><b>Create(width, height, title, resizable)</b> — создаёт окно, задаёт размер, заголовок и режим изменения размера.</li>
+			<li><b>Update()</b> — обновляет изображение в окне и обрабатывает события Windows Forms.</li>
+			<li><b>Clear(r, g, b)</b> — очищает буфер рисования цветом фона.</li>
+			<li><b>Lock()</b> — блокирует bitmap для быстрого доступа к пикселям через память.</li>
+			<li><b>Unlock()</b> — снимает блокировку bitmap после работы с пикселями.</li>
+			<li><b>SetPixelFast(x, y, r, g, b)</b> — быстро устанавливает пиксель по координатам.</li>
+			<li><b>GetPixelFast(x, y)</b> — возвращает цвет пикселя по координатам.</li>
+			<li><b>SetColor(r, g, b)</b> — задаёт цвет обводки для фигур и текста.</li>
+			<li><b>SetFillColor(r, g, b)</b> — задаёт цвет заливки для фигур.</li>
+			<li><b>Rectangle(x, y, width, height, thickness)</b> — рисует прямоугольник только обводкой.</li>
+			<li><b>FillRectangle(x, y, width, height, thickness)</b> — рисует прямоугольник с заливкой и обводкой.</li>
+			<li><b>Circle(x, y, radius, thickness)</b> — рисует окружность.</li>
+			<li><b>FillCircle(x, y, radius, thickness)</b> — рисует заполненную окружность.</li>
+			<li><b>Line(x1, y1, x2, y2, thickness)</b> — рисует линию.</li>
+			<li><b>DrawText(text, x, y, size, fontName)</b> — выводит текст на изображение.</li>
+			<li><b>DrawSprite(textureName, x, y)</b> — рисует изображение из файла.</li>
+			<li><b>Delay(ms)</b> — делает паузу на указанное число миллисекунд.</li>
+			<li><b>Close()</b> — закрывает окно и освобождает ресурсы.</li>
+			<li><b>HideConsole()</b> — скрывает консольное окно.</li>
+			<li><b>ShowConsole()</b> — показывает консольное окно.</li>
+			<li><b>IsKeyPressed(key)</b> — проверяет, зажата ли клавиша.</li>
+			<li><b>IsMousePressed(button)</b> — проверяет, удерживается ли кнопка мыши.</li>
+			<li><b>IsMouseDown(button)</b> — возвращает true один раз в момент нажатия мыши.</li>
+			<li><b>IsMouseUp(button)</b> — возвращает true один раз в момент отпускания мыши.</li>
+			<li><b>IsMouseMove()</b> — проверяет, было ли движение мыши.</li>
+			<li><b>MousePosition</b> — возвращает текущую позицию курсора внутри окна.</li>
+			<li><b>MouseX / MouseY</b> — текущие координаты курсора.</li>
+			<li><b>Width / Height</b> — текущий размер рабочей области окна.</li>
+			<li><b>IsOpen</b> — показывает, открыто ли окно приложения.</li>
+		  </ul>
+	</div>
+	
+	  <a href="mini-dev.html" class="back-link">Назад</a>
+  </div>
+  
+</body>
+</html>
